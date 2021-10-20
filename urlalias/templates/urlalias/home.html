@@ -1,0 +1,16 @@
+{% extends "urlalias/layout.html" %}
+{% block contenido %}
+<h1>
+{{ title }}
+</h1>
+
+<div class="container">
+
+<form method="POST" >
+{% csrf_token %}
+{{  form.as_p }}
+
+<button>Enviar</button>
+</form>
+</div>
+{% endblock contenido %}
